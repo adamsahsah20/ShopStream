@@ -26,13 +26,14 @@ export default function ProductDetails() {
   return (
     <div>
         {product.discountPercentage > 0 &&(<p className="position-sticky d-flex bg-danger top-0 end-0 text-white fs-6 rounded-1" style={{width:"100px"}}>{product.discountPercentage}%</p>)}
-        <img src={product.thumbnail} alt={product.title} style={{width:"300px",marginLeft:"520px"}}/>
+        <img src={product.thumbnail} alt={product.title} style={{maxWidth:"300px",marginLeft:"520px"}} className="d-block mx-auto img-fluid"/>
         <h2 className="text-dark fw-bold text-center">⭐{product.title}</h2>
         <p className="text-dark fw-bold text-center">{product.rating}</p>
         <p className="text-secondary text-center">{product.description}</p>
         <p className="text-success text-center">${product.price}</p>
     
-        <Button variant="outline-primary" style={{marginLeft:"620px"}}  onClick={(e) => {
+       <div className="text-center">
+         <Button variant="outline-primary"   onClick={(e) => {
                   e.preventDefault()
                   e.stopPropagation()
                                           Swal.fire({
@@ -46,6 +47,7 @@ export default function ProductDetails() {
                                             }
                                           });
                                         }}>Add to Cart</Button>
+       </div>
         
     </div>
   )

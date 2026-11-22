@@ -49,8 +49,8 @@ export default function Products() {
   },[query,category,sort])
 
   return (
-    <div className="d-flex gap-4 px-4">
-      <div style={{width:"220px"}}>
+    <div className="d-flex flex-column flex-md-row gap-4 px-4">
+      <div style={{maxWidth:"220px" ,width:"100%"}}>
         <h6 className="text-uppercase text-primary">Category</h6>
         <div style={{height:"300px" , overflowY:"auto"}}>
           {categories.map((c) => (

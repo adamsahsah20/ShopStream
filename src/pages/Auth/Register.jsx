@@ -56,7 +56,7 @@ export default function Register() {
     <div className="d-flex justify-content-center py-5">
       <form
         onSubmit={handleSubmit}
-        style={{ width: "440px" }}
+        style={{ maxWidth: "440px", width: "100%" }}
         className="border rounded-2 shadow-sm p-4 d-flex flex-column gap-3">
         <h3 className="fw-bold text-center">Create Account</h3>
         <p className="text-secondary text-center">
