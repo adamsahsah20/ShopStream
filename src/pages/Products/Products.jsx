@@ -51,14 +51,14 @@ export default function Products() {
   return (
     <div className="d-flex gap-4 px-4">
       <div style={{width:"220px"}}>
-        <h6 className="text-uppercase text-secondary">Category</h6>
+        <h6 className="text-uppercase text-primary">Category</h6>
         <div style={{height:"300px" , overflowY:"auto"}}>
           {categories.map((c) => (
             <div key={c}>
-              <label className="form-check-label text-capitalize">
+              <label className="form-check-label text-capitalize text-info">
                 <input
                   type="checkbox"
-                  className="form-check-input me-2"
+                  className="form-check-input me-2 bg-info "
                   checked={category === c}
                   onChange={()=>setCategory(category === c ? "" : c)}
                 />
