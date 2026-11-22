@@ -55,10 +55,10 @@ export default function Products() {
         <div style={{height:"300px" , overflowY:"auto"}}>
           {categories.map((c) => (
             <div key={c}>
-              <label className="form-check-label text-capitalize text-info">
+              <label className="form-check-label text-capitalize text-primary">
                 <input
                   type="checkbox"
-                  className="form-check-input me-2 bg-info "
+                  className="form-check-input me-2  "
                   checked={category === c}
                   onChange={()=>setCategory(category === c ? "" : c)}
                 />
